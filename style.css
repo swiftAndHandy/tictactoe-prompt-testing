@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 .white {
     color: white;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+.pos-absolute {
+    position: absolute;
+}
+
+.t-0 {
+    top: 0;
+}
 
 body {
     display: flex;
-    ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -29,10 +36,17 @@ body {
     width: 100px;
     height: 100px;
     background-color: #323232;
-    border: 5px solid #fff;
-    font-size: 2em;
+    border: 3px solid #fff;
     cursor: pointer;
-    color: #fff;
+    box-sizing: border-box;
+}
+.cell svg {
+    width: 80%;
+    height: 80%;
+}
+
+.cell:hover {
+    background-color:rgba(255, 255, 255, 0.2);
 }
 
 .cell:nth-child(-n+3) {
