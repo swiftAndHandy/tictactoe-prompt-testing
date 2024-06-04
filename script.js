@@ -76,7 +76,7 @@ function setSymbol(index) {
 
 function isGameFinished() {
     if (!checkWinner() && allFieldsBlocked()) {
-         alert('blub');
+        alert('blub');
     }
 }
 
@@ -101,7 +101,7 @@ function checkWinner() {
             if (!gameIsOver) {
                 drawWinningLine(combination);
                 setTimeout(() => {
-                    alert(`${fields[a]} wins!`);
+
                 }, 300);
                 gameIsOver = true;
                 return true;
@@ -172,4 +172,12 @@ function setSymbol(index) {
         currentSymbol = currentSymbol === 'circle' ? 'cross' : 'circle'; // Alternate symbol after successful set
         isGameFinished();
     }
+}
+
+function restart() {
+    fields = Array(9).fill(null);
+    currentSymbol = 'circle';
+    gameIsOver = false;
+    currentCombination = null;
+    render();
 }
